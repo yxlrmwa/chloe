@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Chloe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <div id="security-page" class="security-container">
+    
+    
+    <div class="progress-word" id="word-display">
+      <span class="letter-slot" id="slot-1">_</span>
+      <span class="letter-slot" id="slot-2">_</span>
+      <span class="letter-slot" id="slot-3">_</span>
+      <span class="letter-slot" id="slot-4">_</span>
+      <span class="letter-slot" id="slot-5">_</span>
+      <span class="letter-slot" id="slot-6">_</span>
+    </div>
+
+    
+    <div class="step-card active" id="step-1">
+      <h2>1. When is my Birthday?</h2>
+      <p class="sub-label">(MM / DD / YY)</p>
+      <div class="date-input-group">
+        <input type="text" id="p1-mm" maxlength="2" placeholder="MM" autocomplete="off" />
+        <span>/</span>
+        <input type="text" id="p1-dd" maxlength="2" placeholder="DD" autocomplete="off" />
+        <span>/</span>
+        <input type="text" id="p1-yy" maxlength="2" placeholder="YY" autocomplete="off" />
+      </div>
+      <button class="action-btn" onclick="checkDatePass(1)">Enter</button>
+      <p class="error-msg" id="err-1">Incorrect date, try again.</p>
+    </div>
+
+    
+    <div class="step-card" id="step-2">
+      <h2>2. When did I confess to you?</h2>
+      <p class="sub-label">(MM / DD / YY)</p>
+      <div class="date-input-group">
+        <input type="text" id="p2-mm" maxlength="2" placeholder="MM" autocomplete="off" />
+        <span>/</span>
+        <input type="text" id="p2-dd" maxlength="2" placeholder="DD" autocomplete="off" />
+        <span>/</span>
+        <input type="text" id="p2-yy" maxlength="2" placeholder="YY" autocomplete="off" />
+      </div>
+      <button class="action-btn" onclick="checkDatePass(2)">Enter</button>
+      <p class="error-msg" id="err-2">Incorrect date, try again.</p>
+    </div>
+
+    
+    <div class="step-card" id="step-3">
+      <h2>3. When is our Anniversary?</h2>
+      <p class="sub-label">(MM / DD / YY)</p>
+      <div class="date-input-group">
+        <input type="text" id="p3-mm" maxlength="2" placeholder="MM" autocomplete="off" />
+        <span>/</span>
+        <input type="text" id="p3-dd" maxlength="2" placeholder="DD" autocomplete="off" />
+        <span>/</span>
+        <input type="text" id="p3-yy" maxlength="2" placeholder="YY" autocomplete="off" />
+      </div>
+      <button class="action-btn" onclick="checkDatePass(3)">Enter</button>
+      <p class="error-msg" id="err-3">Incorrect date, try again.</p>
+    </div>
+
+    
+    <div class="step-card" id="step-4">
+      <h2>4. What is our Callsign?</h2>
+      <input type="text" id="p4-text" class="text-input" placeholder="Type answer here..." autocomplete="off" />
+      <button class="action-btn" onclick="checkTextPass(4)">Enter</button>
+      <p class="error-msg" id="err-4">Incorrect password, try again.</p>
+    </div>
+
+    
+    <div class="step-card" id="step-5">
+      <h2>5. What is our Favorite Color?</h2>
+      <input type="text" id="p5-text" class="text-input" placeholder="Type answer here..." autocomplete="off" />
+      <button class="action-btn" onclick="checkTextPass(5)">Enter</button>
+      <p class="error-msg" id="err-5">Incorrect password, try again.</p>
+    </div>
+
+   
+    <div class="step-card" id="step-6">
+      <h2>6. What was my nickname given by you?</h2>
+      <input type="text" id="p6-text" class="text-input" placeholder="Type answer here..." autocomplete="off" />
+      <button class="action-btn" onclick="checkTextPass(6)">Enter</button>
+      <p class="error-msg" id="err-6">Incorrect password, try again.</p>
+    </div>
+
+  </div>
+
+
+  <div id="welcome-layer" class="welcome-container hidden">
+    <h2>Access Accepted! Welcome, Chloe.</h2>
+    <p>Are you ready to Enter?</p>
+    <button class="action-btn" id="yes-btn" onclick="showPullBar()">Yes</button>
+
+    <div id="pull-bar-wrapper" class="pull-bar-wrapper hidden">
+      <p>Click this</p>
+      <div class="pull-handle" id="pull-handle">
+        <span class="chevron">▼</span>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="main-page" class="main-container hidden">
+    
+    
+    <div class="accordion-box">
+      <button class="accordion-trigger" id="msg-trigger" onclick="toggleMainMessage()">
+        <span>A Message For You</span>
+        <span id="trigger-icon">▼</span>
+      </button>
+
+      <div class="accordion-content" id="msg-content">
+        <div class="inner-text">
+          <p>Hello there, my future wife? hahaha.</p>
+          <br>
+          <p>I honestly don't know when to start, things have been so quick these days... uhm, Mahal na Mahal na Mahal na Mahal na Mahal kita, Chloe. I know you know that. But maybe saying "I love you" isn't just really the most important thing, but It's about how we make things for them to feel it, not just to hear and read it. Efforts, Appreciation, Kindness, Patience, Actions and In the most obvious ways.</p>
+          <br>
+          <p>Which where I failed... nung may mga pagkakataon pa ako iparamdam sa'yo, ipakita, at ipaalala na mahal na mahal na mahal kita, hindi ko yon nagawa. Kasi ngayon.. I don't think na may pagkakataon pa ako na gawin 'yun lahat sa'yo. I admit, masyado akong nakampante na nandito ka lang lagi kahit anong mangyari, but I found it out nung ako na mismo ang napanghinaan. hahaha.........Things are completely different this time, I'm aware of that. But I'm not aware of its possible reason, dahil ba sinukuan kita? dahil ba napanghinaan ako ng loob? dahil ba nasaktan kita?.. But whatever the reasons are, I'm still mad at myself and I won't be able to forgive myself for that.</p>
+          <br>
+          <p>At tama nga yung mga taong sinasabi na "nasa huli ang pag sisisi" because yeah, I'm now regretting all those things, my failure, my idiotic. All those times that I got driven by my fear. Hindi ko na nagawang maisip ka, dahil naunahan na'ko ng takot ko.</p>
+          <br>
+          <p>Which until now, 'di ko parin mapatawad ang sarili ko. Naiinis lang ako dahil ang dami times na meron akong chances, pero dahil sa kahinaan at katangahan ko. Hindi yon nangyari.</p>
+          <br>
+          <p>I'm starting to believe in "regrets are always in the end" because all I can do now is to wish na sana, maibalik ako sa oras na meron pa.. na magagawan ko pa nang paraan ang lahat. I keep wishing na, sana maibaik ako sa mga panahon na marami akong nagawang pagkukulang, para maitama ko, and that time If I had a chance, di na'ko mag papadala sa kaba, takot at sa kahinaan ko.</p>
+          <br>
+          <p>It feels so heavy, I just wanted to be happy with you pero ang labo na ata. Maybe this time I just need to accept the fact na kahit anong gawin ko or natin, wala na. Which is the most freaking difficult part.</p>
+          <br>
+          <p>The only thing I want is to be with you forever, to be your boy forever, to be your eli forever. I've wished for nothing but to always be with you. Wala akong ibang ginugusto at ipinapanalanging iba kundi ang maging masaya lang kasama ka, dahil ikaw lang ang naging rason kung bakit may ngiti sa labi ko. Ikaw yung rason kung bakit ako natuto, kung bakit mas naging matured ako.</p>
+          <br>
+          <p>I just can't accept it everytime na naiisip kong 'Lesson' ka lang sa buhay ko, dahil hindi yon ang gusto kong maging role mo sa buhay ko.. I see you as my wife, as the mother of my child. Pero ang unfair lang.</p>
+          <br>
+          <p>But, who knows? maybe we are really happy together... but, in different universes. Maybe tayo naman talaga, pero sa ibang mundo. Well, I hope that versions of us wil stay forever. I don't want them to end up just like we end up in this timeline. It was so unbearable.</p>
+          <br>
+          <p>But anyways. I hope you're happy, I don't want you to be happy just like how happy you were with me before. I'm selfish, I want you to be happier... I hope he'll treat you right, more than I did.</p>
+          <br>
+          <p>I can see on your reposts na he's a gentle man. I hope it stays until the end, sana hindi siya kagaya ko na walang dinulot sa'yo kundi kahihiyan at sakit. I'm not jealous anymore, I've already accepted it una pa lang, I'm not telling na nagsisinungaling ka na sakin these past few weeks. Pero nung masaya pa tayo, lahat ng kinaseselosan ko.. nilalayuan mo kahit hndi ko sinasabi. But now? you're just denying. But it's fine, I'm not mad or what, I'm happy... Because you're happy.</p>
+          <br>
+          <p>siguro babawi na lang ako, sa ibang panahon, oras, at mundo. Yung alam kong tayo, at hindi yun nag eexist dito sa mundo kung san tayo nag tapos. I believe it exists, it's somewhere else.</p>
+          <br>
+          <p>Kahit dun manlang siguro, makabawi na'ko sa'yo.<br>
+          Maiparamdam ko na kung gano kita kamahal.<br>
+          Maipakita ko na, na gagawin ko ang lahat para sa'yo.<br>
+          at higit sa lahat, maiparamdam sa'yo na deserve mo lahat.. para hindi mo kine-question ang sarili mo kung sapat kaba, kung kamahal mahal kaba. kasi ngayon? naitatanong mo yan sa sarili mo dahil palpak ako.</p>
+          <br>
+          <p>If life could only exists non-stop... I would always wish to be yours, every. single. time..<br>
+          If I only had a million or a hundred thousands of life, I would always choose to be your boy, every. single. time...</p>
+          <br>
+          <p>mahal na mahal na mahal kita, my Chloe</p>
+          <br>
+          <p>I guess this was my last time and last chance to say this word..</p>
+          <br>
+          <p>I Love You So Muchhhhhhhhhhhhh, my one and only princess, my wife, my queen, my love, my baby, my girl, my lady, my kajang, my chlowenggg, my chloe, my best friend, my confidant, my life, my happiness, and my everything...</p>
+          <br>
+          <p>I Love Youu<br>I Love Youuu<br>I Love Youuuuu<br>I Love Youu<br>I Love Youuuu<br>I Love Youuuuuu<br>I Love Youu<br>I Love Youuu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youu<br>I Love Youuuuu<br>I Love Youuu<br>I Love Youuuuuu<br>I Love Youu<br>I Love Youuuu<br>I Love Youuu<br>I Love Youuuuu<br>I Love Youu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youu<br>I Love Youuuu<br>I Love Youuuuu<br>I Love Youu<br>I Love Youuu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youu<br>I Love Youuuuu<br>I Love Youuuu<br>I Love Youu<br>I Love Youuu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youu<br>I Love Youuuuu<br>I Love Youuuu<br>I Love Youu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youuuu<br>I Love Youu<br>I Love Youuuuu<br>I Love Youuu<br>I Love Youuuuuu<br>I Love Youu<br>I Love Youuuu<br>I Love Youuu<br>I Love Youuuuu<br>I Love Youu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youu<br>I Love Youuuu<br>I Love Youuuuu<br>I Love Youu<br>I Love Youuu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youu<br>I Love Youuuuu<br>I Love Youuuu<br>I Love Youu<br>I Love Youuu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youu<br>I Love Youuuuu<br>I Love Youuuu<br>I Love Youu<br>I Love Youuuuuu<br>I Love Youuu<br>I Love Youu<br>I Love Youuuu<br>I Love Youuuuu<br>I Love Youu<br>I Love Youuu<br>I Love Youuuuuu<br>I Love Youuuuu Soooooooo Damn Muchhhh. Chloe...</p>
+          <br>
+          <button class="fold-btn" onclick="toggleMainMessage()">Fold Message</button>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="cards-grid">
+      
+      
+      <div class="info-card">
+        <h3>MY REMINDER</h3>
+        <p class="preview-text">"Since you always forgetting things, and so clumsy. Here.. Read this!"</p>
+        <button class="action-btn" onclick="openModal('reminder-modal')">Open</button>
+      </div>
+
+      
+      <div class="info-card">
+        <h3>My Other Messages</h3>
+        <p class="preview-text">"As I promised, here are what you're curious of."</p>
+        <button class="action-btn" onclick="openModal('messages-modal')">Open</button>
+      </div>
+
+    </div>
+
+    
+    <div class="photos-section">
+      <h2>In case you forgot how happy we used to be before, just look.</h2>
+      <div class="photo-grid">
+        <div class="photo-card"><img src="photo1.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526067/IMG_8117.jpg'"></div>
+        <div class="photo-card"><img src="photo2.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526067/IMG_8122.jpg'"></div>
+        <div class="photo-card"><img src="photo3.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526067/IMG_8119.jpg'"></div>
+        <div class="photo-card"><img src="photo4.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526068/IMG_8134.jpg'"></div>
+        <div class="photo-card"><img src="photo5.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526067/IMG_8121.jpg'"></div>
+        <div class="photo-card"><img src="photo6.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526068/IMG_8124.jpg'"></div>
+        <div class="photo-card"><img src="photo7.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526068/IMG_8128.jpg'"></div>
+        <div class="photo-card"><img src="photo8.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526069/IMG_8125.jpg'"></div>
+        <div class="photo-card"><img src="photo9.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526069/IMG_8131.jpg'"></div>
+        <div class="photo-card"><img src="photo10.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526068/IMG_8130.jpg'"></div>
+        <div class="photo-card"><img src="photo11.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526069/IMG_8129.jpg'"></div>
+        <div class="photo-card"><img src="photo12.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526069/IMG_8132.jpg'"></div>
+        <div class="photo-card"><img src="photo13.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526067/IMG_8123.jpg'"></div>
+        <div class="photo-card"><img src="photo14.jpg" alt="IMISSYOU" onerror="this.src='https://res.cloudinary.com/vduc9rop/image/upload/v1790526069/IMG_8127.jpg'"></div>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <div id="reminder-modal" class="modal-overlay">
+    <div class="modal-card">
+      <h3>My Reminder</h3>
+      <div class="modal-body">
+        <p>I know how heavy the world can feel on your shoulders sometimes, but I just needed to tell you to keep pushing forward. Please, stop listening to the opinions and the noise of other people. Most of them don't really understand your journey, and when you finally reach where you're meant to be, none of them will be standing there beside you anyway.</p>
+        <br>
+        <p>Don't stress yourself out so much trying to prove anything to this world. At the end of the day, achievements, titles, and success are just visual things, they look nice, but none of us get to take any of it with us when we die. The only thing that truly stays is how we treated ourselves and how deeply we lived.</p>
+        <br>
+        <p>So please, just take care of yourself. Don't skip your meals and promise me you’ll eat your breakfast, lunch, and dinner, even when you're busy or not in the mood. Take care of your body, drink lots of water, and cut back on the sweet stuff. I know how much you love your Chuckie, Coke, and Coke Floats, but your health matters way too much. Even from a distance, all I ever want is to know that you are safe, healthy, and happy.</p>
+      </div>
+      <button class="action-btn" onclick="closeModal('reminder-modal')">Close</button>
+    </div>
+  </div>
+
+  
+  <div id="messages-modal" class="modal-overlay">
+    <div class="modal-card">
+      <h3>My Other Messages</h3>
+      <div class="modal-body">
+        <p>As I promised you, I retrieved some of my messages for you.. But I didn't manage to bring everything back.. Anyways, here.</p>
+        <br>
+        <p><strong>1st Day Having you (Feb 16, 2026 - 7:42PM):</strong><br>
+        helloo po chloe AHAHWHWAHWHHAWHA di ko alm kung pano ko sisimulan to... gagi kinikilig ako HHAHWAWHAHWHHSHAWH sobrang saya ko po na malamang may chance ako sayo at gagi di ako makapaniwalang tayo na WHAHSHHHSDSHDAHWHDHADH LIKE DAMN THIS WAS THE BEST DAY OF MY LIFE.. NAIIYAK DIN AKO LIKE FOR REALLL DI KO PO KSI EXPECTED TO THANKYOUUUU AND I LOVE YOUUUUUUUUUUUUU.... HOOOOO GF NA KITAAAAA ACKKKKISHIHWHSAJWHUSUHWW.</p>
+        <br>
+        <p><strong>2nd Day Having you (Feb 17, 2026 - 4:12PM):</strong><br>
+        HELLOOO MY DEAREST GF.. AAAAA SHIYETTTT ANG SARAP SAA FEELINGG. EHEM EHEM anywaysssssssssss. AM SO HAPPY, IBA TLGA KAPAG KAUSAP MO UNG DREAM GIRL MO TAS GF MO PA AY TALAGAAAA ANNVKANIWSANFJSFNUW0VJ ILOVEYOUUUUUUUUUUUUUUUUU</p>
+        <br>
+        <p><strong>1st Week:</strong><br>
+        Hello baby kouhhh, happy 1st week sa'tin, may isesend ako sa'yong alternative message for this first weekkk. kasi wala lng, ayoko lng isend to..<br>
+        de ano po kasi, ILOVEYOUUUUUUUUUUUUUUUUUUUUUUUUSOMUCHHHHHHHHHH!!!<br>
+        HAHAWHASHWHHA.. de ano po, gusto ko mag thankyou sa'yo kasi sa 1 week natin together, sobra sobra mokong napapasayaa. as in sooooobra,, sobrang thankyou po baby.. ILOVEYOUSOMUCHHHHHHHHH!! and pasensya na po kung 1 week pa lng tayo sakit na agad ng ulo dala ko sayo AAHHAHAHHAHAH MMWAAAAAAA!!</p>
+        <br>
+        <p><strong>1st Month:</strong><br>
+        Happy 1st monthsary, my baby chloeeeee!<br><br>
+        It’s honestly hard to believe that it’s already been a full month since we officially started this journey together. Parang kailan lng kasi HAHAHA, the time has completely flown by because of how much fun and happiness we’ve shared. But on the other hand, it feels like I’ve known and loved you for a lifetime because of how natural, easy, and right everything feels when I’m with you.🥹🥹<br><br>
+        Before you came into my life, I thought I understood what warmth and comfort felt like, but you’ve completely redefined it for me. In just thirty days, you’ve become my favorite part of every single morning, my peaceful thought before I go to sleep, and the highlight of every day in between. Even the simplest moments just talking about nothing, sharing a laugh, or sitting in quiet comfort feel so special simply because they're with you.<br><br>
+        Thank you for being so patient, gentle, and caring with me. Thank you for showing up as your true self, for making me feel so safe to be mine, and for bringing a kind of joy into my world that I didn't even know was missing. Every small gesture, every sweet word, and every shared smile has meant more to me than I can properly put into words.<br><br>
+        One month down, and I already know this is just the very beginning of our story. I am so excited for all the memories, adventures, quiet days, and milestones that are still waiting for us.<br><br>
+        Thank you for choosing me, for loving me, and for being the incredible person you are. Happy 1st Monthsary my babyyyy. ILOVEYOUUUUUUUUUUU 🥹🥹</p>
+      </div>
+      <button class="action-btn" onclick="closeModal('messages-modal')">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
